@@ -200,7 +200,7 @@ section { padding: clamp(52px, 7vw, 88px) 0; }
   color: var(--ink-mute); font-weight: 700; margin-bottom: 1.5em;
 }
 .hero p.lead { font-size: 1.06rem; color: var(--ink-soft); max-width: 46ch; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 2rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 2rem; justify-content: center; }
 .hero-art { color: var(--sage); opacity: .95; }
 
 .locbar {
