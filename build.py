@@ -60,7 +60,7 @@ LEAFRULE = svg(
   '<path d="M46 3.2v9.6" stroke-width=".8"/>',
   cls="leafrule", vb="0 0 92 16")
 
-HERO_ART = ('<img class="hero-emblem" src="assets/img/logo-full.png" width="778" height="1009" alt="StillBleu — Anthroposophic and Integrative Medicine" loading="eager">')
+HERO_ART = ('<img class="hero-emblem" src="assets/img/logo-mark-gentle.gif" width="264" height="264" alt="" loading="eager">')
 
 # --------------------------------------------------------------------------
 # helpers — emit English text with a data-i18n hook
@@ -165,8 +165,8 @@ def page(fname, title_key, desc_key, body, cur, extra_js=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Poppins:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/i18n.js"></script>
+<link rel="stylesheet" href="assets/css/style.css?v=3">
+<script src="assets/js/i18n.js?v=2"></script>
 <style>html.lang-pending body{{visibility:hidden}}</style>
 <script>
 (function(){{var h=document.documentElement;h.classList.add('lang-pending');
@@ -220,6 +220,7 @@ def home():
       <div class="hero-actions">
         <a class="btn btn-primary" href="booking.html" data-i18n="cta.book">{t("cta.book")}</a>
         <a class="btn btn-ghost" href="therapies.html" data-i18n="cta.therapies">{t("cta.therapies")}</a>
+        <a class="btn btn-ghost" href="{t('flyer.file')}" download data-i18n="flyer.download" data-i18n-attr="href:flyer.file">{t("flyer.download")}</a>
       </div>
     </div>
     <div>{HERO_ART}</div>
@@ -227,6 +228,18 @@ def home():
 </section>
 
 <div class="locbar"><div class="wrap"><p data-i18n="loc.text">{t("loc.text")}</p></div></div>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-i18n="who.eyebrow">{t("who.eyebrow")}</p>
+      <h2 data-i18n="who.head">{t("who.head")}</h2>
+      <p data-i18n="who.lead">{t("who.lead")}</p>
+      <p style="color:var(--ink-mute);font-size:.95rem" data-i18n="who.note">{t("who.note")}</p>
+    </div>
+    <div>{LI("who.items")}</div>
+  </div>
+</section>
 
 <section>
   <div class="wrap split">
@@ -254,18 +267,6 @@ def home():
     </div>
     <div class="grid grid-3">{cards}</div>
     <p class="center" style="margin-top:34px"><a class="btn btn-ghost" href="therapies.html" data-i18n="cta.therapies">{t("cta.therapies")}</a></p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow" data-i18n="who.eyebrow">{t("who.eyebrow")}</p>
-      <h2 data-i18n="who.head">{t("who.head")}</h2>
-      <p data-i18n="who.lead">{t("who.lead")}</p>
-      <p style="color:var(--ink-mute);font-size:.95rem" data-i18n="who.note">{t("who.note")}</p>
-    </div>
-    <div>{LI("who.items")}</div>
   </div>
 </section>
 
