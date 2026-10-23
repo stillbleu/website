@@ -232,7 +232,6 @@ def home():
 <section>
   <div class="wrap split">
     <div>
-      <p class="eyebrow" data-i18n="who.eyebrow">{t("who.eyebrow")}</p>
       <h2 data-i18n="who.head">{t("who.head")}</h2>
       <p data-i18n="who.lead">{t("who.lead")}</p>
       <p style="color:var(--ink-mute);font-size:.95rem" data-i18n="who.note">{t("who.note")}</p>
@@ -244,7 +243,6 @@ def home():
 <section>
   <div class="wrap split">
     <div>
-      <p class="eyebrow" data-i18n="core.eyebrow">{t("core.eyebrow")}</p>
       <h2 data-i18n="core.head">{t("core.head")}</h2>
       <p data-i18n="core.lead">{t("core.lead")}</p>
       <p style="color:var(--ink-mute);font-size:.95rem" data-i18n="core.note">{t("core.note")}</p>
@@ -260,7 +258,6 @@ def home():
 <section class="sec-alt">
   <div class="wrap">
     <div class="center" style="max-width:640px;margin-inline:auto">
-      <p class="eyebrow" data-i18n="serv.eyebrow">{t("serv.eyebrow")}</p>
       <h2 data-i18n="serv.head">{t("serv.head")}</h2>
       <p data-i18n="serv.lead">{t("serv.lead")}</p>
       {LEAFRULE}
@@ -276,8 +273,7 @@ def home():
 def about():
     body = f'''<section class="pagehead">
   <div class="wrap narrow">
-    <p class="eyebrow" data-i18n="phil.eyebrow">{t("phil.eyebrow")}</p>
-    <h1 style="font-size:clamp(2.2rem,4.6vw,3.4rem)" data-i18n="phil.head">{t("phil.head")}</h1>
+    <h1 data-i18n="phil.head">{t("phil.head")}</h1>
     <p class="lead" data-i18n="phil.p1">{t("phil.p1")}</p>
     <p data-i18n="phil.p2">{t("phil.p2")}</p>
     <p data-i18n="phil.p3">{t("phil.p3")}</p>
@@ -287,8 +283,7 @@ def about():
 <section>
   <div class="wrap split">
     <div>
-      <p class="eyebrow" data-i18n="about.eyebrow">{t("about.eyebrow")}</p>
-      <h2 style="font-size:clamp(2rem,4.2vw,3rem);margin-bottom:.2em" data-i18n="about.head">{t("about.head")}</h2>
+      <h2 style="margin-bottom:.2em" data-i18n="about.head">{t("about.head")}</h2>
       <p class="about-role" data-i18n="about.role">{t("about.role")}</p>
       <p class="lead" data-i18n="about.lead">{t("about.lead")}</p>
       <p data-i18n="about.p2">{t("about.p2")}</p>
@@ -365,8 +360,7 @@ def approach():
       </article>'''
     body = f'''<section class="pagehead">
   <div class="wrap">
-    <p class="eyebrow" data-i18n="appr.eyebrow">{t("appr.eyebrow")}</p>
-    <h1 style="font-size:clamp(2.2rem,4.6vw,3.4rem)" data-i18n="appr.head">{t("appr.head")}</h1>
+    <h1 data-i18n="appr.head">{t("appr.head")}</h1>
     <p class="epigraph" data-i18n="appr.epigraph">{t("appr.epigraph")}</p>
     <p class="lead" data-i18n="appr.lead">{t("appr.lead")}</p>
   </div>
@@ -415,8 +409,7 @@ def therapies():
       </article>'''
     body = f'''<section class="pagehead">
   <div class="wrap">
-    <p class="eyebrow" data-i18n="ther.eyebrow">{t("ther.eyebrow")}</p>
-    <h1 style="font-size:clamp(2.2rem,4.6vw,3.4rem)" data-i18n="ther.head">{t("ther.head")}</h1>
+    <h1 data-i18n="ther.head">{t("ther.head")}</h1>
     <p class="lead" data-i18n="ther.lead">{t("ther.lead")}</p>
   </div>
 </section>
@@ -478,8 +471,7 @@ def booking():
 
     body = f'''<section class="pagehead">
   <div class="wrap">
-    <p class="eyebrow" data-i18n="book.eyebrow">{t("book.eyebrow")}</p>
-    <h1 style="font-size:clamp(2.2rem,4.6vw,3.4rem)" data-i18n="book.head">{t("book.head")}</h1>
+    <h1 data-i18n="book.head">{t("book.head")}</h1>
     <p class="lead" data-i18n="book.lead">{t("book.lead")}</p>
   </div>
 </section>
@@ -520,7 +512,7 @@ def thankyou():
     body = f'''<section class="pagehead" style="min-height:52vh;display:flex;align-items:center">
   <div class="wrap narrow center">
     {LEAFRULE}
-    <h1 style="font-size:clamp(2.4rem,5vw,3.6rem)" data-i18n="ty.head">{t("ty.head")}</h1>
+    <h1 data-i18n="ty.head">{t("ty.head")}</h1>
     <p class="lead" data-i18n="ty.p">{t("ty.p")}</p>
     <p data-i18n="ty.p2">{t("ty.p2")}</p>
     <p style="margin-top:2rem"><a class="btn btn-primary" href="index.html" data-i18n="ty.btn">{t("ty.btn")}</a></p>
@@ -531,8 +523,7 @@ def thankyou():
 def contact():
     body = f'''<section class="pagehead">
   <div class="wrap">
-    <p class="eyebrow" data-i18n="cont.eyebrow">{t("cont.eyebrow")}</p>
-    <h1 style="font-size:clamp(2.2rem,4.6vw,3.4rem)" data-i18n="cont.head">{t("cont.head")}</h1>
+    <h1 data-i18n="cont.head">{t("cont.head")}</h1>
     <p class="lead" data-i18n="cont.lead">{t("cont.lead")}</p>
   </div>
 </section>

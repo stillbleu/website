@@ -511,6 +511,24 @@ textarea { min-height: 130px; resize: vertical; }
 }
 .center .epigraph { margin-inline: auto; }
 
+/* ---------- floating header + StillBleu typography ------------------- */
+.site-header {
+  margin-bottom: -84px;
+  background: rgba(255,255,255,.78);
+}
+
+h1, h2 {
+  font-family: var(--wordmark);
+  font-weight: 400;
+}
+
+.hero { padding-top: clamp(120px, 11vw, 140px); }
+.pagehead { padding-top: clamp(120px, 7vw, 140px); }
+
+@media (max-width: 640px) {
+  .site-header { margin-bottom: -78px; }
+}
+
 /* `.nav a` outranks `.btn-primary` — restate the CTA's colour */
 .nav a.btn.header-cta { color: #FFFFFF; }
 .nav a.btn.header-cta:hover { color: #FFFFFF; background: #2A5474; }
@@ -524,4 +542,37 @@ textarea { min-height: 130px; resize: vertical; }
   .brand-name { font-size: 1.35rem; }
   .brand-sub { max-width: 175px; white-space: normal; font-size: .43rem; letter-spacing: .06em; }
   .hero h1 { font-size: clamp(3.5rem, 16vw, 5rem); }
+}
+
+h1, h2, h3 {
+  font-family: var(--wordmark);
+  font-weight: 400;
+}
+
+h1 { font-size: 3.6rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+.hero h1 { font-size: 4.8rem; }
+.pagehead h1 { font-size: 3.4rem; }
+
+@media (max-width: 640px) {
+  h1, .pagehead h1 { font-size: 2.7rem; }
+  h2 { font-size: 2.1rem; }
+  h3 { font-size: 1.65rem; }
+  .hero h1 { font-size: 3.5rem; }
+}
+
+.card h2, .card h3, .feature h2, .feature h3,
+.formcard h2, .formcard h3, .calwrap h2, .calwrap h3 {
+  font-family: var(--serif);
+}
+
+.card h3, .feature h3, .formcard h3, .calwrap h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+  font-weight: 500;
+}
+
+.feature h2, .formcard h2, .calwrap h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  font-weight: 400;
 }
