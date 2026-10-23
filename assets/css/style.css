@@ -485,13 +485,16 @@ textarea { min-height: 130px; resize: vertical; }
 .hero-emblem { width: min(330px, 78%); height: auto; margin-inline: auto; }
 
 /* portrait — About page */
-.portrait { margin: 0 0 1.8rem; }
-.portrait img, .portrait video {
-  display: block; width: 100%; border-radius: var(--r);
+.portrait { width: 100%; max-width: 430px; margin: 0 auto 1.8rem; }
+.portrait img {
+  display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r);
   box-shadow: var(--shadow); background: var(--bg-alt);
 }
-.portrait img { height: auto; }
-.portrait video { aspect-ratio: 4 / 5; object-fit: cover; }
+.portrait video {
+  display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r);
+  object-position: top center;
+  box-shadow: var(--shadow); background: var(--bg-alt);
+}
 .portrait figcaption {
   margin-top: .7rem; font-size: .84rem; letter-spacing: .04em;
   color: var(--ink-mute);
