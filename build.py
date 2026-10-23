@@ -281,7 +281,7 @@ def about():
 </section>
 
 <section>
-  <div class="wrap split">
+  <div class="wrap split about-profile">
     <div>
       <h2 style="margin-bottom:.2em" data-i18n="about.head">{t("about.head")}</h2>
       <p class="about-role" data-i18n="about.role">{t("about.role")}</p>

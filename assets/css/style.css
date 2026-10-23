@@ -495,6 +495,42 @@ textarea { min-height: 130px; resize: vertical; }
   object-position: top center;
   box-shadow: var(--shadow); background: var(--bg-alt);
 }
+.about-profile { align-items: stretch; }
+.about-profile > div:last-child {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  min-height: 0;
+}
+.about-profile .portrait {
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+}
+.about-profile .portrait video {
+  flex: 1 1 0;
+  height: 0;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+.about-profile .quote { margin: 0; }
+
+@media (max-width: 860px) {
+  .about-profile { align-items: start; }
+  .about-profile > div:last-child { display: block; }
+  .about-profile .portrait {
+    max-width: 430px;
+    margin: 0 auto 1.8rem;
+  }
+  .about-profile .portrait video {
+    flex: none;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .about-profile .quote { margin: 2.2rem 0; }
+}
 .portrait figcaption {
   margin-top: .7rem; font-size: .84rem; letter-spacing: .04em;
   color: var(--ink-mute);
@@ -519,7 +555,37 @@ textarea { min-height: 130px; resize: vertical; }
 /* ---------- floating header + StillBleu typography ------------------- */
 .site-header {
   margin-bottom: -84px;
-  background: rgba(255,255,255,.78);
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: 0;
+}
+
+.header-inner {
+  width: 57vw;
+  max-width: 1140px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 2px;
+  padding: 8px 24px 10px;
+  border: 1px solid rgba(255,255,255,.58);
+  border-radius: 999px;
+  background: rgba(255,255,255,.32);
+  backdrop-filter: saturate(150%) blur(16px);
+  box-shadow: 0 8px 28px rgba(29,58,82,.09);
+}
+
+.brand {
+  justify-self: center;
+  min-width: 0;
+  margin-right: 0;
+}
+
+.nav {
+  grid-row: 2;
+  justify-content: center;
+  width: 100%;
 }
 
 h1, h2 {
@@ -532,6 +598,37 @@ h1, h2 {
 
 @media (max-width: 640px) {
   .site-header { margin-bottom: -78px; }
+}
+
+@media (max-width: 1180px) {
+  .header-inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 78px;
+    padding: 0 50px;
+  }
+
+  .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    order: 0;
+    border-color: rgba(255,255,255,.7);
+    background: rgba(255,255,255,.32);
+    backdrop-filter: saturate(150%) blur(12px);
+  }
+
+  .nav { top: 98px; max-height: calc(100vh - 98px); }
 }
 
 /* `.nav a` outranks `.btn-primary` — restate the CTA's colour */
