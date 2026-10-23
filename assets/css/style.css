@@ -486,10 +486,12 @@ textarea { min-height: 130px; resize: vertical; }
 
 /* portrait — About page */
 .portrait { margin: 0 0 1.8rem; }
-.portrait img {
-  display: block; width: 100%; height: auto; border-radius: var(--r);
+.portrait img, .portrait video {
+  display: block; width: 100%; border-radius: var(--r);
   box-shadow: var(--shadow); background: var(--bg-alt);
 }
+.portrait img { height: auto; }
+.portrait video { aspect-ratio: 4 / 5; object-fit: cover; }
 .portrait figcaption {
   margin-top: .7rem; font-size: .84rem; letter-spacing: .04em;
   color: var(--ink-mute);

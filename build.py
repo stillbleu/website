@@ -293,9 +293,10 @@ def about():
     </div>
     <div>
       <figure class="portrait" id="portrait">
-        <img src="assets/img/srijan.jpg" width="900" height="1125" loading="lazy"
-             alt="Dr Srijan Gupta"
-             onerror="document.getElementById('portrait').remove()">
+        <video width="900" height="1125" autoplay muted loop playsinline controls preload="metadata"
+               poster="assets/img/srijan.JPG" aria-label="Portrait video of Dr Srijan Gupta">
+          <source src="assets/video/about-loop.mp4" type="video/mp4">
+        </video>
         <figcaption data-i18n="about.portrait.cap">{t("about.portrait.cap")}</figcaption>
       </figure>
       <blockquote class="quote" data-i18n="about.quote">{t("about.quote")}</blockquote>
