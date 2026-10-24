@@ -33,6 +33,8 @@ ICONS = {
  "movement": '<circle cx="12" cy="5" r="2"/><path d="M12 7v6m0-3-4-2m4 2 4-2m-4 3-3 6m3-6 3 6"/>',
  "drop": '<path d="M12 3.2c-2.5 3.2-5.2 6.2-5.2 9.2a5.2 5.2 0 0 0 10.4 0c0-3-2.7-6-5.2-9.2Z"/>'
    '<path d="M9.5 13.1a2.6 2.6 0 0 0 2.6 2.6"/>',
+ "steam": '<path d="M7 20v-3c0-2 2-2 2-4V9"/><path d="M12 20v-4c0-2 2-2 2-4V7"/>'
+    '<path d="M17 20v-3c0-2 2-2 2-4V9"/>',
  # needle — acupuncture
  "needle": '<path d="M20.5 3.5 9.8 14.2"/><path d="m7 17 2.8-2.8"/><path d="M4 20.5 6.4 18"/>'
            '<circle cx="16.4" cy="7.6" r="3.4"/>',
@@ -461,6 +463,23 @@ def therapies():
         </figure>
       </div>
     </div>
+    <div class="feature sauna-feature">
+      <div class="feature-head">
+        {svg(ICONS["steam"])}
+        <h2 style="margin:0" data-i18n="ther.sauna.head">{t("ther.sauna.head")}</h2>
+      </div>
+      <div class="sauna-body">
+        <div class="feature-copy">
+          <p data-i18n="ther.sauna.p">{t("ther.sauna.p")}</p>
+        </div>
+        <figure class="sauna-photo">
+          <a href="https://www.aubier.ch/fr/photos.html" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/aubier-sauna.jpg" width="460" height="307" loading="lazy"
+                 alt="{t('ther.sauna.photo.alt')}" data-i18n-attr="alt:ther.sauna.photo.alt">
+          </a>
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -627,7 +646,7 @@ def contact():
           <input type="checkbox" id="cconsent" name="consent" required value="yes">
           <label for="cconsent" data-i18n="f.consent2">{t("f.consent2")}</label>
         </div>
-        <button class="btn btn-primary" type="submit" data-i18n="cta.send">{t("cta.send")}</button>
+        <div class="form-actions"><button class="btn btn-primary" type="submit" data-i18n="cta.send">{t("cta.send")}</button></div>
       </form>
     </div>
   </div>

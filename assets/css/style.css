@@ -355,6 +355,15 @@ section { padding: clamp(52px, 7vw, 88px) 0; }
   border-radius: var(--r);
   box-shadow: var(--shadow);
 }
+.sauna-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  align-items: center;
+  gap: clamp(24px, 4vw, 44px);
+}
+.sauna-photo { width: 100%; max-width: 460px; margin: 0; justify-self: end; }
+.sauna-photo img { display: block; width: 100%; height: auto; border-radius: var(--r); }
+.form-actions { display: flex; justify-content: center; margin-top: 1.2rem; }
 
 .pill-row { display: flex; flex-wrap: wrap; gap: 9px; margin: 1.3rem 0 0; padding: 0; list-style: none; }
 .feature .pill-row { justify-content: flex-end; align-content: center; margin: 0; }
@@ -380,6 +389,8 @@ section { padding: clamp(52px, 7vw, 88px) 0; }
 @media (max-width: 760px) {
   .eurythmy-body { grid-template-columns: 1fr; }
   .eurythmy-portrait { justify-self: center; }
+  .sauna-body { grid-template-columns: 1fr; }
+  .sauna-photo { justify-self: center; }
 }
 
 /* ---------- definition table ------------------------------------------ */
@@ -758,26 +769,62 @@ h1, h2 {
 /* small screens: keep room for the menu button */
 .brand { min-width: 0; }
 @media (max-width: 640px) {
-  .site-header { margin-bottom: -108px; }
+  .site-header { margin-bottom: -72px; }
   .header-inner {
-    flex-direction: column;
-    width: 63vw;
-    min-width: 200px;
-    max-width: 760px;
-    gap: 6px;
-    min-height: 0;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    min-width: 0;
+    max-width: 560px;
+    justify-content: center;
+    gap: 0;
+    min-height: 64px;
     margin-top: 0;
-    padding: 8px;
+    padding: 8px 56px 8px 16px;
   }
-  .brand { position: static; transform: none; }
-  .nav-toggle { position: static; transform: none; order: 0; }
-  .nav { top: 128px; max-height: calc(100vh - 128px); }
-  .header-inner { min-height: 0; }
+  .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .nav-toggle {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    order: 0;
+  }
+  .nav {
+    top: 72px;
+    max-height: calc(100dvh - 80px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 0 16px;
+    padding: 10px 20px 16px;
+  }
+  .nav a { padding: 8px 0; font-size: .92rem; white-space: normal; }
+  .nav a.btn.header-cta {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 10px 14px;
+  }
+  .nav .langs { grid-column: 1; justify-self: start; margin: 8px 0 0; }
+  .nav .nav-aubier {
+    grid-column: 2;
+    justify-self: end;
+    margin: 8px 0 0;
+    padding: 0;
+    border-top: 0;
+  }
   .brand { min-width: 0; gap: 8px; }
   .brand-mark { width: 40px; height: 40px; }
   .brand-name { font-size: 1.35rem; }
   .brand-sub { max-width: 175px; white-space: normal; font-size: .43rem; letter-spacing: .06em; }
   .hero h1 { font-size: clamp(3.5rem, 16vw, 5rem); }
+  .btn { max-width: 100%; padding: 12px 18px; white-space: normal; text-align: center; }
 }
 
 h1, h2, h3 {
