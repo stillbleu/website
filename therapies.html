@@ -41,12 +41,13 @@ setTimeout(function(){h.classList.remove('lang-pending');},700);})();
       <a href="index.html" data-i18n="nav.home">Home</a><a href="about.html" data-i18n="nav.about">About</a><a href="approach.html" data-i18n="nav.approach">Approach</a><a href="therapies.html" aria-current="page" data-i18n="nav.therapies">Therapies</a><a href="contact.html" data-i18n="nav.contact">Contact</a>
       <a class="btn btn-primary btn-sm header-cta" href="booking.html" data-i18n="cta.book">Book your consultation</a>
       <div class="langs"><button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button><button class="lang-btn" type="button" data-lang="fr" aria-pressed="false">FR</button></div>
+      <a class="nav-aubier" href="https://www.aubier.ch/fr/" target="_blank" rel="noopener noreferrer">L'Aubier</a>
     </nav>
   </div>
 </header>
 <main id="main">
 <section class="pagehead">
-  <div class="wrap">
+  <div class="wrap center">
     <h1 data-i18n="ther.head">Therapies Offered</h1>
     <p class="lead" data-i18n="ther.lead">Anthroposophic external therapies are the leading focus of the clinic. Complementary modalities are offered as supporting approaches, chosen individually after consultation.</p>
   </div>
@@ -56,12 +57,34 @@ setTimeout(function(){h.classList.remove('lang-pending');},700);})();
   <div class="wrap">
     <div class="feature">
       <div class="feature-head">
-        <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M8.5 13V5.4a1.4 1.4 0 0 1 2.8 0V11"/><path d="M11.3 11V4.2a1.4 1.4 0 0 1 2.8 0V11"/><path d="M14.1 11.6V6.6a1.35 1.35 0 0 1 2.7 0V15c0 3.3-2.3 5.8-5.5 5.8-3 0-4.6-1.7-5.6-3.9l-1.5-3.3a1.4 1.4 0 0 1 2.3-1.5l1.4 1.7"/></svg>
+        <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3.2c-2.5 3.2-5.2 6.2-5.2 9.2a5.2 5.2 0 0 0 10.4 0c0-3-2.7-6-5.2-9.2Z"/><path d="M9.5 13.1a2.6 2.6 0 0 0 2.6 2.6"/></svg>
         <h2 style="margin:0" data-i18n="ther.aet.head">Anthroposophic External Therapies</h2>
       </div>
-      <p data-i18n="ther.aet.p">Anthroposophic external therapies use touch, rhythm, warmth, oils, compresses, wraps and other externally applied treatments to support relaxation, vitality, circulation, breathing and the body's natural regulatory processes.</p>
-      <p data-i18n="ther.aet.p2">Treatments are quiet and unhurried. They are selected individually after an initial consultation, and are often given as a series rather than as single sessions.</p>
-      <ul class="pill-row" data-i18n-list="ther.aet.items"><li>Rhythmic massage</li><li>Oil applications</li><li>Therapeutic compresses</li><li>Poultices and wraps</li><li>Warmth treatments</li><li>External applications</li><li>Therapeutic movement and rhythm-based work</li></ul>
+      <div class="feature-body">
+        <div class="feature-copy">
+          <p data-i18n="ther.aet.p">Anthroposophic external therapies use touch, rhythm, warmth, oils, compresses, wraps and other externally applied treatments to support relaxation, vitality, circulation, breathing and the body's natural regulatory processes.</p>
+          <p data-i18n="ther.aet.p2">Treatments are quiet and unhurried. They are selected individually after an initial consultation, and are often given as a series rather than as single sessions.</p>
+        </div>
+        <ul class="pill-row" data-i18n-list="ther.aet.items"><li>Rhythmic massage</li><li>Oil applications</li><li>Therapeutic compresses</li><li>Poultices and wraps</li><li>Warmth treatments</li><li>External applications</li><li>Therapeutic movement and rhythm-based work</li></ul>
+      </div>
+    </div>
+    <div class="feature eurythmy-feature">
+      <div class="feature-head">
+        <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="5" r="2"/><path d="M12 7v6m0-3-4-2m4 2 4-2m-4 3-3 6m3-6 3 6"/></svg>
+        <h2 style="margin:0" data-i18n="ther.eury.head">Curative Eurythmy</h2>
+      </div>
+      <div class="eurythmy-body">
+        <div class="feature-copy">
+          <p data-i18n="ther.eury.p">Curative Eurythmy is a guided movement-based complementary therapy. Movement sequences are selected in relation to the person's diagnosis and individual situation.</p>
+          <p data-i18n="ther.eury.visit">Visiting therapist <strong><a href="https://www.luzern-kinderarzt.ch/angebot/heileurythmie" target="_blank" rel="noopener noreferrer">Hermo Sebastian Beer</a></strong> will visit StillBleu approximately every one to two months. Sessions are offered following a threefold anthroposophic diagnosis at the clinic. Contact StillBleu for upcoming dates.</p>
+          <p style="margin-top:1.2rem"><a class="btn btn-ghost" href="contact.html" data-i18n="ther.eury.cta">Ask about upcoming visits</a></p>
+        </div>
+        <figure class="eurythmy-portrait">
+          <a href="https://www.luzern-kinderarzt.ch/angebot/heileurythmie" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/hermo-sebastian-beer.jpg" width="181" height="220" loading="lazy" alt="Hermo Sebastian Beer">
+          </a>
+        </figure>
+      </div>
     </div>
   </div>
 </section>

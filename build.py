@@ -30,6 +30,9 @@ ICONS = {
  "touch": '<path d="M8.5 13V5.4a1.4 1.4 0 0 1 2.8 0V11"/><path d="M11.3 11V4.2a1.4 1.4 0 0 1 2.8 0V11"/>'
           '<path d="M14.1 11.6V6.6a1.35 1.35 0 0 1 2.7 0V15c0 3.3-2.3 5.8-5.5 5.8-3 0-4.6-1.7-5.6-3.9'
           'l-1.5-3.3a1.4 1.4 0 0 1 2.3-1.5l1.4 1.7"/>',
+ "movement": '<circle cx="12" cy="5" r="2"/><path d="M12 7v6m0-3-4-2m4 2 4-2m-4 3-3 6m3-6 3 6"/>',
+ "drop": '<path d="M12 3.2c-2.5 3.2-5.2 6.2-5.2 9.2a5.2 5.2 0 0 0 10.4 0c0-3-2.7-6-5.2-9.2Z"/>'
+   '<path d="M9.5 13.1a2.6 2.6 0 0 0 2.6 2.6"/>',
  # needle — acupuncture
  "needle": '<path d="M20.5 3.5 9.8 14.2"/><path d="m7 17 2.8-2.8"/><path d="M4 20.5 6.4 18"/>'
            '<circle cx="16.4" cy="7.6" r="3.4"/>',
@@ -116,6 +119,7 @@ def header(page):
       {links}
       <a class="btn btn-primary btn-sm header-cta" href="booking.html" data-i18n="cta.book">{t("cta.book")}</a>
       <div class="langs">{langs}</div>
+      <a class="nav-aubier" href="https://www.aubier.ch/fr/" target="_blank" rel="noopener noreferrer">L'Aubier</a>
     </nav>
   </div>
 </header>'''
@@ -202,7 +206,7 @@ def bookcta():
 def home():
     cards = ""
     # row 1: the three services featured on the home page
-    featured = [("touch", 1), ("leaf", 6), ("energy", 5)]
+    featured = [("drop", 1), ("leaf", 6), ("energy", 5)]
     for pos, (ic, n) in enumerate(featured):
         lead = ' lead-card' if pos == 0 else ''
         cards += f'''<article class="card{lead} reveal">
@@ -216,8 +220,10 @@ def home():
   <div class="wrap hero-grid">
     <div>
       <h1>StillBleu</h1>
-      <p class="hero-sub" data-i18n="hero.sub">{t("hero.sub")}</p>
-      <p class="hero-tag" data-i18n="hero.tag">{t("hero.tag")}</p>
+      <div class="hero-caption">
+        <p class="hero-sub" data-i18n="hero.sub">{t("hero.sub")}</p>
+        <p class="hero-tag" data-i18n="hero.tag">{t("hero.tag")}</p>
+      </div>
       <div class="hero-actions">
         <a class="btn btn-primary" href="booking.html" data-i18n="cta.book">{t("cta.book")}</a>
         <a class="btn btn-ghost" href="therapies.html" data-i18n="cta.therapies">{t("cta.therapies")}</a>
@@ -270,7 +276,7 @@ def home():
       {LEAFRULE}
     </div>
     <div class="grid grid-3">{cards}</div>
-    <p class="center" style="margin-top:34px"><a class="btn btn-ghost" href="therapies.html" data-i18n="cta.therapies">{t("cta.therapies")}</a></p>
+    <div class="therapy-cta"><a class="btn btn-ghost" href="therapies.html" data-i18n="cta.therapies">{t("cta.therapies")}</a></div>
   </div>
 </section>
 
@@ -416,7 +422,7 @@ def therapies():
         <p data-i18n="ther.c{n}.p">{t(f"ther.c{n}.p")}</p>
       </article>'''
     body = f'''<section class="pagehead">
-  <div class="wrap">
+  <div class="wrap center">
     <h1 data-i18n="ther.head">{t("ther.head")}</h1>
     <p class="lead" data-i18n="ther.lead">{t("ther.lead")}</p>
   </div>
@@ -426,12 +432,34 @@ def therapies():
   <div class="wrap">
     <div class="feature">
       <div class="feature-head">
-        {svg(ICONS["touch"])}
+        {svg(ICONS["drop"])}
         <h2 style="margin:0" data-i18n="ther.aet.head">{t("ther.aet.head")}</h2>
       </div>
-      <p data-i18n="ther.aet.p">{t("ther.aet.p")}</p>
-      <p data-i18n="ther.aet.p2">{t("ther.aet.p2")}</p>
-      {PILLS("ther.aet.items")}
+      <div class="feature-body">
+        <div class="feature-copy">
+          <p data-i18n="ther.aet.p">{t("ther.aet.p")}</p>
+          <p data-i18n="ther.aet.p2">{t("ther.aet.p2")}</p>
+        </div>
+        {PILLS("ther.aet.items")}
+      </div>
+    </div>
+    <div class="feature eurythmy-feature">
+      <div class="feature-head">
+        {svg(ICONS["movement"])}
+        <h2 style="margin:0" data-i18n="ther.eury.head">{t("ther.eury.head")}</h2>
+      </div>
+      <div class="eurythmy-body">
+        <div class="feature-copy">
+          <p data-i18n="ther.eury.p">{t("ther.eury.p")}</p>
+          <p data-i18n="ther.eury.visit">{t("ther.eury.visit")}</p>
+          <p style="margin-top:1.2rem"><a class="btn btn-ghost" href="contact.html" data-i18n="ther.eury.cta">{t("ther.eury.cta")}</a></p>
+        </div>
+        <figure class="eurythmy-portrait">
+          <a href="https://www.luzern-kinderarzt.ch/angebot/heileurythmie" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/hermo-sebastian-beer.jpg" width="181" height="220" loading="lazy" alt="Hermo Sebastian Beer">
+          </a>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
