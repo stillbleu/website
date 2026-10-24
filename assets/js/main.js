@@ -53,3 +53,24 @@
 
   items.forEach(function (el) { io.observe(el); });
 })();
+
+(function () {
+  var hero = document.querySelector('.hero');
+  var photo = document.querySelector('.hero-photo');
+  if (!hero || !photo || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var frame = 0;
+  function updatePhoto() {
+    frame = 0;
+    var offset = Math.max(-16, Math.min(16, -hero.getBoundingClientRect().top * 0.045));
+    photo.style.setProperty('--parallax-y', offset.toFixed(2) + 'px');
+  }
+
+  function scheduleUpdate() {
+    if (!frame) frame = window.requestAnimationFrame(updatePhoto);
+  }
+
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate);
+  scheduleUpdate();
+})();

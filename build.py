@@ -210,24 +210,31 @@ def home():
         <h3 data-i18n="serv.{n}.h">{t(f"serv.{n}.h")}</h3>
         <p data-i18n="serv.{n}.p">{t(f"serv.{n}.p")}</p>
       </article>'''
-    body = f'''<section class="hero">
+    body = f'''<div class="hero-stage">
+  <img class="hero-photo" src="assets/img/hero-photo-cropped.jpg" alt="" aria-hidden="true">
+  <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <h1>StillBleu</h1>
       <p class="hero-sub" data-i18n="hero.sub">{t("hero.sub")}</p>
       <p class="hero-tag" data-i18n="hero.tag">{t("hero.tag")}</p>
-      <p class="lead" data-i18n="hero.text">{t("hero.text")}</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="booking.html" data-i18n="cta.book">{t("cta.book")}</a>
         <a class="btn btn-ghost" href="therapies.html" data-i18n="cta.therapies">{t("cta.therapies")}</a>
         <a class="btn btn-ghost" href="{t('flyer.file')}" download data-i18n="flyer.download" data-i18n-attr="href:flyer.file">{t("flyer.download")}</a>
       </div>
     </div>
-    <div>{HERO_ART}</div>
+  </div>
+  </section>
+
+  <div class="locbar"><div class="wrap"><p data-i18n="loc.text">{t("loc.text")}</p></div></div>
+
+<section class="hero-intro">
+  <div class="wrap narrow">
+    <p class="lead" data-i18n="hero.text">{t("hero.text")}</p>
   </div>
 </section>
-
-<div class="locbar"><div class="wrap"><p data-i18n="loc.text">{t("loc.text")}</p></div></div>
+</div>
 
 <section>
   <div class="wrap split">
