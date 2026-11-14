@@ -119,9 +119,9 @@ def header(page):
     </button>
     <nav class="nav" id="nav">
       {links}
+      <a class="nav-aubier" href="https://www.aubier.ch/fr/" target="_blank" rel="noopener noreferrer">L'Aubier</a>
       <a class="btn btn-primary btn-sm header-cta" href="booking.html" data-i18n="cta.book">{t("cta.book")}</a>
       <div class="langs">{langs}</div>
-      <a class="nav-aubier" href="https://www.aubier.ch/fr/" target="_blank" rel="noopener noreferrer">L'Aubier</a>
     </nav>
   </div>
 </header>'''
@@ -171,7 +171,7 @@ def page(fname, title_key, desc_key, body, cur, extra_js=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Poppins:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <script src="assets/js/i18n.js?v=2"></script>
 <style>html.lang-pending body{{visibility:hidden}}</style>
 <script>
@@ -238,8 +238,18 @@ def home():
   <div class="locbar"><div class="wrap"><p data-i18n="loc.text">{t("loc.text")}</p></div></div>
 
 <section class="hero-intro">
-  <div class="wrap narrow">
-    <p class="lead" data-i18n="hero.text">{t("hero.text")}</p>
+  <div class="wrap">
+    <div class="hero-intro-layout reveal">
+      <img class="hero-intro-portrait" src="assets/img/IMG_0607.jpeg" width="480" height="600"
+           loading="lazy" decoding="async" alt="Portrait of Dr Srijan Gupta"
+           data-i18n-attr="alt:hero.portrait.alt">
+      <div class="hero-intro-copy">
+        <p class="lead" data-i18n="hero.text">{t("hero.text")}</p>
+        <div class="hero-intro-action">
+          <a class="btn btn-light" href="about.html" data-i18n="hero.about">{t("hero.about")}</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 </div>

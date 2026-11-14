@@ -30,7 +30,9 @@ EN = {
  "home.desc": "A clinic at L'Aubier, Montézillon (NE), offering anthroposophic external therapies complemented by selected holistic and integrative approaches to support balance, vitality and well-being.",
  "hero.sub": "Anthroposophic External Therapies & Integrative Healing",
  "hero.tag": "Cultivating health, vitality & inner balance",
- "hero.text": "Nestled in an anthroposophic community with a view over Lake Neuchâtel and the Swiss Alps, the clinic at L'Aubier in Montézillon (NE) offers anthroposophic external therapies supported by complementary holistic approaches for body, mind and inner well-being.",
+ "hero.text": "My name is Dr Srijan Gupta. I welcome you to my practice at L'Aubier in Montézillon (NE), nestled in an anthroposophic community with views over Lake Neuchâtel and the Swiss Alps. I offer anthroposophic external therapies alongside selected holistic approaches to support body, mind and inner well-being.",
+ "hero.portrait.alt": "Portrait of Dr Srijan Gupta",
+ "hero.about": "About me",
  "loc.text": "Consultations and treatments take place at <strong>L'Aubier, Montézillon (NE), Switzerland</strong>.<br>Online consultations may also be available where appropriate.",
 
  "core.head": "A Different Approach to Well-being",
@@ -294,7 +296,9 @@ FR = {
  "home.desc": "Un cabinet à L'Aubier, Montézillon (NE), proposant des thérapies externes anthroposophiques complétées par des approches holistiques et intégratives choisies, pour favoriser l'équilibre, la vitalité et le bien-être.",
  "hero.sub": "Thérapies externes anthroposophiques & soins intégratifs",
  "hero.tag": "Cultiver la santé, la vitalité et l'équilibre intérieur",
- "hero.text": "Niché dans une communauté anthroposophique avec vue sur le lac de Neuchâtel et les Alpes suisses, le cabinet de L'Aubier, à Montézillon (NE), propose des thérapies externes anthroposophiques soutenues par des approches holistiques complémentaires pour le corps, l'âme et le bien-être intérieur.",
+ "hero.text": "Je m'appelle Dr Srijan Gupta. Je vous accueille dans mon cabinet à L'Aubier, à Montézillon (NE), au cœur d'une communauté anthroposophique avec vue sur le lac de Neuchâtel et les Alpes suisses. Je propose des thérapies externes anthroposophiques, complétées par des approches holistiques choisies, pour accompagner le corps, l'esprit et le bien-être intérieur.",
+ "hero.portrait.alt": "Portrait du Dr Srijan Gupta",
+ "hero.about": "À propos de moi",
  "loc.text": "Les consultations et les traitements ont lieu à <strong>L'Aubier, Montézillon (NE), Suisse</strong>.<br>Des consultations en ligne peuvent également être proposées lorsque cela est approprié.",
 
  "core.head": "Une autre approche du bien-être",
