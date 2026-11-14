@@ -32,6 +32,12 @@
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
+    document.addEventListener('click', function (e) {
+      if (!nav.classList.contains('open') ||
+          nav.contains(e.target) || toggle.contains(e.target)) return;
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
   }
 
   var items = document.querySelectorAll('.reveal');
